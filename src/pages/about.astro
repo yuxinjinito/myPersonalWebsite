@@ -1,5 +1,14 @@
 ---
+const pageTitle = "About Me";
+const identity = {
+    firstName: "Yuxin",
+    HomeCity: "Shanghai,China",
+    hobbies: ["coding", "travelling", "watching movies", "reading"],
+    birthDate: "09-30-2005",
+};
 
+const skills = ["Python","Java","JavaScript","HTML"];
+const happy = true;
 ---
 
 <html lang="en">
@@ -8,14 +17,22 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<a href="/">Homepage</a>
-        <a href="/">About Me</a>
-        <a href="/">Blog</a>
-		<h1>About Me</h1>
+        <a href="/about">About Me</a>
+        <a href="/blog">Blog</a>
+		<h1>{pageTitle}</h1>
         <h4>Personal Statement</h4>
         <p>I am a student at the University of Wisconsin-Madison, pursuing a Bachelor in Computer Science.</p>
+        <p>Facts about me:</p>
+        <ul>
+            <li>I was born on {identity.birthDate}.</li>
+            <li>I come from {identity.HomeCity}.</li>
+            <li>My hobbies are {identity.hobbies.join(", ")}.</li>
+            <li>My skills are {skills.join(", ")}.</li>
+            <li>{happy && <p>Dark Secret: I broked my arm when I was planning a solo trip around South America 2 months ago.</p>}</li>
+        </ul>
 	</body>
 </html>
