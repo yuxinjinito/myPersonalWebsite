@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 const pageTitle = "About Me";
 const identity = {
     firstName: "Yuxin",
@@ -9,6 +11,10 @@ const identity = {
 
 const skills = ["Python","Java","JavaScript","HTML"];
 const happy = true;
+
+const skillColor = "crimson";
+const fontWeight = "bold";
+const textCase = "uppercase"
 ---
 
 <html lang="en">
@@ -18,6 +24,17 @@ const happy = true;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+        <style define:vars={{skillColor, fontWeight, textCase}}>
+            h1 {
+              color: purple;
+              font-size: 4rem;
+            }
+            .skill {
+                color: var(--skillColor);
+                font-weight: var(--fontWeight);
+                text-transform: var(--textCase);
+            }
+          </style>
 	</head>
 	<body>
 		<a href="/">Homepage</a>
@@ -31,7 +48,10 @@ const happy = true;
             <li>I was born on {identity.birthDate}.</li>
             <li>I come from {identity.HomeCity}.</li>
             <li>My hobbies are {identity.hobbies.join(", ")}.</li>
-            <li>My skills are {skills.join(", ")}.</li>
+            <li>My skills are 
+                <ul>
+                    {skills.map((skill) => <li class="skill">{skill}</li>)}
+                </ul></li>
             <li>{happy && <p>Dark Secret: I broked my arm when I was planning a solo trip around South America 2 months ago.</p>}</li>
         </ul>
 	</body>
