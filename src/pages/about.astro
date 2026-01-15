@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import Footer from '../components/Footer.astro'
+import Header from '../components/Header.astro'
 
 const pageTitle = "About Me";
 const identity = {
@@ -37,9 +39,7 @@ const textCase = "uppercase"
           </style>
 	</head>
 	<body>
-		<a href="/">Homepage</a>
-        <a href="/about">About Me</a>
-        <a href="/blog">Blog</a>
+        <Header/>
 		<h1>{pageTitle}</h1>
         <h4>Personal Statement</h4>
         <p>I am a student at the University of Wisconsin-Madison, pursuing a Bachelor in Computer Science.</p>
@@ -54,5 +54,6 @@ const textCase = "uppercase"
                 </ul></li>
             <li>{happy && <p>Dark Secret: I broked my arm when I was planning a solo trip around South America 2 months ago.</p>}</li>
         </ul>
+        <Footer />
 	</body>
 </html>
