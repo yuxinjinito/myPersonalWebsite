@@ -1,18 +1,16 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'My First Blog'
 pubDate: 2026-01-14
 description: 'This is my first blog post on this website'
 author: 'Yuxin Jin'
 image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'The Astro logo on a dark background with a pink glow.'
+  url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+  alt: "A sunrise seen from the mountains, symbolizing a new beginning"
 tags: ["blogging", "self-talk"]
 ---
 
-# My First Blog Post
-
- Published in 1/14/2026
-
+# Good morning, my neighbor!
  It is a week before my first day in Spring semester in 2026, I am in the winter break, but thinking about what to do in the incoming academic semester (including building a personal website).
 
  ## What's next
