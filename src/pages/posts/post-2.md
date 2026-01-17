@@ -7,7 +7,7 @@ author: 'Yuxin Jin'
 image:
   url: "/images/blog/WordCloud-25fall.png"
   alt: "WordCloud for classes I took @25Fall"
-tags: ["blogging", "self-talk"]
+tags: ["course-review"]
 ---
 
 ## Comp Sci 252 - Intro to Computer Engineering
