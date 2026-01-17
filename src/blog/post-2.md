@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'My 25Fall Course Review'
 pubDate: 2026-01-15
 description: 'Review about courses I took @25Fall.'
